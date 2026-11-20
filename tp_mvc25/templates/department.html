@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/bootstrap.min.css" rel="stylesheet">
+  <title>Departments</title>
+</head>
+
+<body>
+  DATA_NAVBAR
+
+  <div class="container my-4">
+    <div class="row">
+
+      <!-- Form tambah / ubah departemen -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-header DATA_FORM_COLOR">
+            <h4 class="text-white m-0">DATA_FORM_TITLE</h4>
+          </div>
+          <div class="card-body">
+            <form method="post" action="department.php">
+              <input type="hidden" name="id" value="DATA_ID">
+
+              <label class="form-label">DEPARTMENT NAME</label>
+              <input type="text" name="name" class="form-control mb-3" value="DATA_NAME" required>
+
+              <label class="form-label">BUILDING</label>
+              <input type="text" name="building" class="form-control mb-3" value="DATA_BUILDING" required>
+
+              <button type="submit" name="DATA_BUTTON_NAME" class="btn btn-success">DATA_BUTTON_TEXT</button>
+              DATA_CANCEL
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabel departemen -->
+      <div class="col-md-8">
+        <h3 class="text-center mb-3">Departments Table</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>DEPARTMENT NAME</th>
+              <th>BUILDING</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
+            DATA_TABEL
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
